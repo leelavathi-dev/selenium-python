@@ -1,0 +1,18 @@
+# YOU NEED HAVE A SELENIUM WORKING VIRTUAL INTERPRETER IN PYTHON EXCUTION POINT.
+# YOU NEED TO HAVE CHROME OR ELSE NEED TO DOWNLOAD,IF YOU WANT TO EXCUTE IN CHROME.
+
+from selenium import webdriver
+#download current version of chrome driver
+#copy the exact path of chromedrive and paste
+driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
+driver.maximize_window() # for maximize window
+driver.get("https://www.google.com/") # for google page
+
+print(driver.title) # to get title which is opened
+print(driver.current_url) # to get URL
+
+driver.get("https://www.amazon.com/")
+driver.get("https://www.amazon.com//international-sales-offers//b//?ie=UTF8&node=15529609011&ref_=nav_cs_gb_intl")
+driver.back() 
+driver.refresh()
+driver.close()
